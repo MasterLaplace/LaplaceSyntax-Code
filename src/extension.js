@@ -17,7 +17,7 @@ function activate(context) {
         diagnosticsManager.updateDiagnostics(document, allDiagnostics);
     });
 
-    vscode.languages.registerCodeActionsProvider('laplace-syntax', new LaplaceQuickFixProvider());
+    vscode.languages.registerCodeActionsProvider('laplace', new LaplaceQuickFixProvider());
 
     context.subscriptions.push(diagnosticsManager.diagnosticCollection);
 }

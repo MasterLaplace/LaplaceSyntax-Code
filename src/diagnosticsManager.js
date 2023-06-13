@@ -2,13 +2,13 @@ const vscode = require('vscode');
 
 class DiagnosticsManager {
     constructor() {
-        this.diagnosticCollection = vscode.languages.createDiagnosticCollection('laplace-syntax');
+        this.diagnosticCollection = vscode.languages.createDiagnosticCollection('laplace');
     }
 
     createDiagnostic(range, message, code) {
         const diagnostic = new vscode.Diagnostic(range, message, vscode.DiagnosticSeverity.Error);
         diagnostic.code = code;
-        diagnostic.source = 'laplace-syntax';
+        diagnostic.source = 'laplace';
         return diagnostic;
     }
 
@@ -22,6 +22,10 @@ class DiagnosticsManager {
 
     detectFunctionNameErrors(document) {
         const diagnostics = [];
+
+        if (document.languageId !== 'laplace') {
+            return diagnostics;
+        }
 
         const regexFunctionName = /\b[A-Za-z_]+[0-9]+[A-Za-z_]*\b/g;
         const text = document.getText();
@@ -46,6 +50,10 @@ class DiagnosticsManager {
 
     detectUninitializedGlobalVariables(document) {
         const diagnostics = [];
+
+        if (document.languageId !== 'laplace') {
+            return diagnostics;
+        }
 
         const regexGlobalVariable = /\bglobal\s+[A-Za-z_]+\b(?!\s*=)/g;
         const text = document.getText();

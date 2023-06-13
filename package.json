@@ -10,6 +10,9 @@
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [
+        "onLanguage:laplace"
+    ],
     "contributes": {
         "themes": [{
             "label": "laplace-syntax",
