@@ -56,6 +56,13 @@
                 "match": "\\b[A-Za-z][A-Za-z_]+\\("
             }]
         },
+        "diagnostics": {
+            "patterns": [
+                {
+                    "name": "invalid.illegal.function-name.laplace",
+                    "match": "\\b[A-Za-z_]+[0-9]+[A-Za-z_]*\\("
+                }
+            ]
         }
     },
     "scopeName": "source.lpl"

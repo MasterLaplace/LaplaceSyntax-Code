@@ -3,6 +3,7 @@
     "displayName": "Laplace Syntax",
     "description": "Official Syntax support for the Laplace programming language.",
     "version": "0.0.1",
+    "main": "src/extension.js",
     "engines": {
         "vscode": "^1.79.0"
     },
