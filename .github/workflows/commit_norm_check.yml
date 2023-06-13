@@ -19,7 +19,7 @@ jobs:
       - name: Commit Name Checker
         run: |
             commit_msg=$(git log --format=%B -n 1 ${{ github.sha }})
-            keyword_regex="^\[[A-Z][@_A-Za-z]+\] : "
+            keyword_regex="^\[[A-Z][@_A-Za-z, ]+\] : "
 
             if [[ ! $commit_msg =~ $keyword_regex ]]; then
                 if [[ $commit_msg =~ ^Merge\ .* ]]; then

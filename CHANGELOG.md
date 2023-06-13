@@ -7,3 +7,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Initial release
+- [Add] : initial commit to add laplace icon
+- [Add] : laplace-theme, single quote, global variable and function color
+- [Add] : diagnostics for uninitialized global variable and invalid function name
