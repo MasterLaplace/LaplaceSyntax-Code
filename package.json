@@ -1,33 +1,38 @@
 {
-  "name": "laplace-syntax",
-  "displayName": "Laplace Syntax",
-  "description": "Official Syntax support for the Laplace programming language.",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.79.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [{
-      "id": "laplace",
-      "aliases": ["Laplace", "laplace"],
-      "extensions": [".lpl"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./images/laplace-logo.png",
-        "dark": "./images/laplace-logo.png"
-      }
-    }],
-    "grammars": [{
-      "language": "laplace",
-      "scopeName": "source.lpl",
-      "path": "./syntaxes/laplace.tmLanguage.json"
-    }]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MasterLaplace/LaplaceSyntax-Code.git"
-  }
+    "name": "laplace-syntax",
+    "displayName": "Laplace Syntax",
+    "description": "Official Syntax support for the Laplace programming language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.79.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "themes": [{
+            "label": "laplace-syntax",
+            "uiTheme": "vs-dark",
+            "path": "./themes/laplace-theme.json"
+        }],
+        "languages": [{
+            "id": "laplace",
+            "aliases": ["Laplace", "laplace"],
+            "extensions": [".lpl"],
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./images/laplace-logo.png",
+                "dark": "./images/laplace-logo.png"
+            }
+        }],
+        "grammars": [{
+            "language": "laplace",
+            "scopeName": "source.lpl",
+            "path": "./syntaxes/laplace.tmLanguage.json"
+        }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MasterLaplace/LaplaceSyntax-Code.git"
+    }
 }

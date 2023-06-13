@@ -1,32 +1,62 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Laplace",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.laplace",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.laplace",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.laplace",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.lpl"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Laplace",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#functions"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.laplace",
+                    "match": "\\b(if|while|for|return)\\b"
+                },
+                {
+                    "name": "keyword.declaration.laplace",
+                    "match": "\\b(global)\\b",
+                    "captures": {
+                        "1": { "name": "keyword.declaration.laplace" }
+                    }
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+              {
+                "name": "string.quoted.double.laplace",
+                "begin": "\"",
+                "end": "\"",
+                "patterns": [{
+                    "name": "constant.character.escape.laplace",
+                    "match": "\\\\."
+                }]
+              },
+              {
+                "name": "string.quoted.single.laplace",
+                "begin": "'",
+                "end": "'",
+                "patterns": [{
+                    "name": "constant.character.escape.laplace",
+                    "match": "\\\\."
+                }]
+              }
+            ]
+        },
+        "functions": {
+            "patterns": [{
+                "name": "entity.name.function.laplace",
+                "match": "\\b[A-Za-z][A-Za-z_]+\\("
+            }]
+        },
+        }
+    },
+    "scopeName": "source.lpl"
 }

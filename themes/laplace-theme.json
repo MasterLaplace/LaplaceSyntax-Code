@@ -1,0 +1,28 @@
+{
+    "name": "laplace-theme",
+    "colors": {
+        "keyword.declaration.laplace": "#FF0000",
+        "invalid.illegal.function-name.laplace": "#FF0000"
+    },
+    "tokenColors": [
+        {
+            "scope": "keyword.declaration.laplace",
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "scope": "invalid.illegal.function-name.laplace",
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        },
+        {
+            "scope": "source.lpl meta.definition.variable.laplace keyword.declaration.laplace",
+            "settings": {
+                "foreground": "#FF0000",
+                "fontStyle": "bold"
+            }
+        }
+    ]
+}
