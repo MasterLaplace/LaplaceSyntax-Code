@@ -6,6 +6,12 @@
             "include": "#keywords"
         },
         {
+            "include": "#import"
+        },
+        {
+            "include": "#lplspecific"
+        },
+        {
             "include": "#strings"
         },
         {
@@ -25,6 +31,22 @@
                     "captures": {
                         "1": { "name": "keyword.declaration.laplace" }
                     }
+                }
+            ]
+        },
+        "import": {
+            "patterns": [
+                {
+                    "name": "keyword.control.laplace",
+                    "match": "\\b(import)\\b"
+                }
+            ]
+        },
+        "lplspecific": {
+            "patterns": [
+                {
+                    "name": "keyword.control.laplace",
+                    "match": "\\b<(header|implementation)[\\s]+([\\w]+)>[\\s]*:\\b"
                 }
             ]
         },
