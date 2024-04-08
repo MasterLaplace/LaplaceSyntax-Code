@@ -20,6 +20,34 @@ Laplace Syntax Language extension for VSCode
 - [Contacts](#contacts)
 
 
+## **Dependencies**
+
+- [npm](https://www.npmjs.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+```bash
+sudo apt-get install npm -y nodejs
+nvm install node
+npm install -g @vscode/vsce
+```
+
+## **Installation**
+
+```bash
+git clone https://github.com/MasterLaplace/LaplaceSyntax-Code.git
+cd LaplaceSyntax-Code
+vsce package
+code --install-extension laplace-syntax-0.0.1.vsix
+```
+
+## **Update**
+
+```bash
+git pull
+vsce package
+code --install-extension laplace-syntax-0.0.1.vsix
+```
+
 <div id='release_note'/>
 
 ## :pencil: **Release Notes**
