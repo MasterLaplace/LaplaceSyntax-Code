@@ -1,17 +1,17 @@
 {
     "name": "laplace-syntax",
+    "publisher": "MasterLaplace",
     "displayName": "Laplace Syntax",
     "description": "Official Syntax support for the Laplace programming language.",
     "version": "0.0.1",
     "main": "src/extension.js",
+    "icon": "./images/laplace-logo.png",
     "engines": {
         "vscode": "^1.79.0"
     },
     "categories": [
-        "Programming Languages"
-    ],
-    "activationEvents": [
-        "onLanguage:laplace"
+        "Programming Languages",
+        "Themes"
     ],
     "contributes": {
         "themes": [{
